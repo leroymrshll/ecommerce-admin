@@ -25,9 +25,6 @@ export default function Orders() {
                 {orders.length > 0 && orders.map(order => (
                     <tr key={order._id}>
                         <td>{(new Date(order.createdAt)).toLocaleString()}</td>
-                        <td className={order.paid ? "text-green-500" : "text-red-500"}>
-                            {order.paid ? "YES" : "NO"}
-                        </td>
                         <td>
                             {order.name} {order.email}<br />
                             {order.city} {order.postalCode} {order.country}<br />
