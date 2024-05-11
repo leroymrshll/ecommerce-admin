@@ -5,23 +5,6 @@ import Logo from "./Logo";
 
 export default function Layout({children}) {
     const [showNav, setShowNav] = useState(false);
-    const { data: session } = useSession();
-    if (!session) {
-    return (<div className="bg-bgGray w-screen h-screen flex items-center">
-        <div className="text-center w-full">
-        <div className="flex flex-col items-center justify-center">
-            <h1>
-                Welcome to the e-commerce admin dashboard.
-            </h1>
-            <h1>
-                Login with your google account to get started.
-            </h1>
-        </div>
-            <button onClick={() => signIn('google')} className="bg-white p-2 px-4 rounded-lg">Login with Google</button>
-        </div>
-    </div>);
-  }
-
   return (
     <div className="bg-bgGray min-h-screen">
         <div className="md:hidden flex items-center p-3">
